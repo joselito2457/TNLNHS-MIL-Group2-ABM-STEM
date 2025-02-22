@@ -26,6 +26,7 @@ function submitPost() {
     var writerName = document.getElementById('writer-name').value;
     var insight = document.getElementById('insight-input').value;
     var perception = document.getElementById('perception-input').value;
+    var understanding = document.getElementById('understanding-input').value;
 
     if (insight) {
         addPost('insights', writerName, insight);
@@ -35,6 +36,11 @@ function submitPost() {
     if (perception) {
         addPost('perceptions', writerName, perception);
         document.getElementById('perception-input').value = '';
+    }
+
+    if (understanding) {
+        addPost('understanding', writerName, understanding);
+        document.getElementById('understanding-input').value = '';
     }
 
     document.getElementById('writer-name').value = '';
@@ -62,7 +68,7 @@ function displayPost(type, post) {
 }
 
 function loadPosts() {
-    ['insights', 'perceptions'].forEach(type => {
+    ['insights', 'perceptions', 'understanding'].forEach(type => {
         var posts = JSON.parse(localStorage.getItem(type)) || [];
         posts.forEach(post => displayPost(type, post));
     });
