@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIL Group 2 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <h2>Enter Password</h2>
+            <input type="password" id="member-password" placeholder="Enter password">
+            <button onclick="handleAuth()">Submit</button>
+        </div>
+    </div>
+
+    <nav class="frost-nav glass-panel scroll-animation">
+        <a href="#home" class="nav-link"><i class="fas fa-home"></i></a>
+        <a href="#work" class="nav-link"><i class="fas fa-briefcase"></i></a>
+        <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i></a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i></a>
+        <button id="auth-btn" class="nav-link" onclick="handleLogout()">Logout</button>
+    </nav>
+
+    <section id="home" class="hero scroll-animation">
+        <div class="content-card glass-panel">
+            <h1>MIL Group 2 Portfolio</h1>
+            <p class="tagline">Exploring the realms of Media and Information Literacy<br>Empowering through knowledge and skills</p>
+        </div>
+    </section>
+
+    <section id="work" class="section scroll-animation">
+        <div class="content-card glass-panel">
+            <h2>Recent Projects</h2>
+            <div class="project-grid">
+                <div class="project-card glass-panel">
+                    <h3>Media Literacy Campaign</h3>
+                    <p>Promoting critical thinking and media analysis skills</p>
+                </div>
+                <div class="project-card glass-panel">
+                    <h3>Information Literacy Workshop</h3>
+                    <p>Teaching effective research and information evaluation techniques</p>
+                </div>
+                <!-- Add more project cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add members section -->
+    <section id="members" class="section scroll-animation">
+        <div class="content-card glass-panel">
+            <h2>Members</h2>
+            <ul>
+                <li>Joselito Jamito</li>
+                <li>Merk Escalante De Vela</li>
+                <li>Leo Villaluz</li>
+                <li>Ronald Pardo</li>
+                <li>Angielyn Acusar</li>
+                <li>Leah Angela Azures</li>
+                <li>Chennuel Federez</li>
+                <li>Cyril Pelleja</li>
+                <li>Janine Racoma</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Add insights section -->
+    <section id="insights" class="section scroll-animation">
+        <div class="content-card glass-panel">
+            <h2>Insights</h2>
+            <div id="insights-container"></div>
+        </div>
+    </section>
+
+    <!-- Add perceptions section -->
+    <section id="perceptions" class="section scroll-animation">
+        <div class="content-card glass-panel">
+            <h2>Perceptions</h2>
+            <div id="perceptions-container"></div>
+        </div>
+    </section>
+
+    <!-- Add understanding section -->
+    <section id="understanding" class="section scroll-animation">
+        <div class="content-card glass-panel">
+            <h2>Understanding</h2>
+            <div id="understanding-container"></div>
+        </div>
+    </section>
+
+    <!-- Add submission section -->
+    <section id="member-section" class="section scroll-animation" style="display: none;">
+        <div class="content-card glass-panel">
+            <h2>Share Your Perspectives</h2>
+            <div class="submission-form">
+                <input type="text" id="writer-name" placeholder="Your name">
+                <textarea id="insight-input" placeholder="Your insight..."></textarea>
+                <textarea id="perception-input" placeholder="Your perception..."></textarea>
+                <textarea id="understanding-input" placeholder="Your understanding..."></textarea>
+                <button id="submit-button">Submit Post</button>
+            </div>
+            <div id="posts-container"></div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
